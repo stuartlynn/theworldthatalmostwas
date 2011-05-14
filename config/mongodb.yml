@@ -1,0 +1,17 @@
+development: &global_settings
+  host: localhost
+  database: theWorldThatNearlyWas
+  port: 27017
+
+test:
+  database: oldWeather-test
+  <<: *global_settings
+
+production:
+  host: flame.mongohq.com
+  database: theWorldThatAlmostWas
+  username: stuartlynn
+  password: astr0Talk_#!
+  port: 27102
+
+  <<: *global_settings
